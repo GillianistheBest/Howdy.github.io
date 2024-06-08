@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculator</title>
+  <style>
+    body {
+      background-color: #FF0842;
+    }
+  </style>
+</head>
+
+<body>
+
+  <label>first Number</label>
+  <input id = "input" type ="number">
+
+  <label>second Number</label>
+  <input id = "input0" type ="number">
+  
+  <button onclick = "add()">Add</button>
+  <button onclick = "subtract()">Subtract</button>
+  <button onclick = "multiply()">Multiply</button>
+  <button onclick = "divide()">Divide</button>
+
+  <p id = "text"></p>
+  
+  <script>
+    function add() {
+      var input = parseInt (document.getElementById("input").value);
+      var input0 = parseInt (document.getElementById("input0").value);
+      var add=input0 +input;
+      var text = document.getElementById("text");
+      text.innerHTML = add;
+    }
+    function subtract() {
+      var input = parseInt (document.getElementById("input").value);
+      var input0 = parseInt (document.getElementById("input0").value);
+      var subtract=input0 -input;
+      var text = document.getElementById("text");
+      text.innerHTML = subtract;
+    }
+
+    function multiply() {
+      var input = parseInt (document.getElementById("input").value);
+      var input0 = parseInt (document.getElementById("input0").value);
+      var times=input0 *input;
+      var text = document.getElementById("text");
+      text.innerHTML = times;
+    }
+    function divide() {
+      var input = parseInt (document.getElementById("input").value);
+      var input0 = parseInt (document.getElementById("input0").value);
+      if (input0 == 0) {
+        var divide = "DUMMY";
+      }
+      else { 
+        var divide=input0 /input;
+      }
+      var text = document.getElementById("text");
+      text.innerHTML = divide;
+    }
+  </script>
+  
+</body>
+
+</html>
